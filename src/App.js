@@ -26,10 +26,7 @@ return (
             <Flags />
           </Route>          
           <Route path="/:countryCode">
-            <FlagDetail />
-          </Route>            
-          <Route path="/:countryCapital">
-            <FlagDetail />
+            <FlagDetail />          
           </Route>
         </Switch>
         

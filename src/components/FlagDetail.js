@@ -5,11 +5,7 @@ import { useEffect, useState } from "react"
 const FlagDetail = (props) => {
 
 
-    let { countryCode } = useParams();
-    
-    
-    
-     
+    let { countryCode } = useParams();     
     
     const [detail, setDetail] = useState({});
     
@@ -21,10 +17,7 @@ const FlagDetail = (props) => {
                 setDetail(json)                
             })
     },[countryCode])
-
-    
-    
-    
+   
     return (
         <div>
             <ul>
