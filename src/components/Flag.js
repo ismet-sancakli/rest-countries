@@ -1,13 +1,23 @@
-const Flag = (props) => {    
+import { Link } from "react-router-dom";
+
+const Flag = ({country}) => {    
     
     return(
-        
-        <div className="col-3"> 
-            <h2>{props.name}</h2>
-            <h4>{props.capital}</h4>
-            <p><img src={props.image} alt={props.name} className="img-thumbnail"/></p>
 
-        </div>        
+        <div className="col-3"> 
+            <Link to={country.alpha2Code}>
+
+                <h2>{country.name}</h2>
+                <p>
+
+                    <img src={country.flag} alt={country.name} className="img-thumbnail"/>
+
+                </p>
+                
+            </Link>
+            
+        </div>
+
     );
 }
 

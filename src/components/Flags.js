@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Flag from "./Flag"
+import Flag from "./Flag"   
 
 const Flags = () => {
 
@@ -15,10 +15,10 @@ const Flags = () => {
 
     return (
         <div className="row">
-            <h2>Flags</h2>
+            <h2>Countries Properties</h2>
 
             {flags.map((country) => (
-            <Flag name={country.name} capital={country.capital} image={country.flag}></Flag>
+                <Flag key={country.alpha2Code} country={country}/>
             ))}       
 
         </div>
