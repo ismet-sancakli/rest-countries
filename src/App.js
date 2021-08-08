@@ -8,33 +8,25 @@ import './App.scss';
 import FlagDetail from "./components/FlagDetail";
 import Flags from './components/Flags';
 
-
 function App() {
 return (
     <Router>
       <div>
-
         <ul>
           <li>
             <Link to="/">Home</Link>
           </li>          
-        </ul>
-                
-        <Switch>          
-
+        </ul>                
+        <Switch>
           <Route exact path="/">
             <Flags />
           </Route>          
           <Route path="/:countryCode">
             <FlagDetail />          
           </Route>
-        </Switch>
-        
+        </Switch>        
       </div>
     </Router>
   );
-
 }
-
-
 export default App;
