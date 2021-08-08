@@ -1,14 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react"
 
-
 const FlagDetail = (props) => {
-
 
     let { countryCode } = useParams();     
     
     const [detail, setDetail] = useState({});
-    
 
     useEffect(() => {
         fetch("https://restcountries.eu/rest/v2/alpha/" + countryCode)
@@ -30,12 +27,8 @@ const FlagDetail = (props) => {
                 <li>
                     {detail.flag}
                 </li>                
-            </ul>
-            
-        </div>
-        
+            </ul>            
+        </div>        
     );
 }
-
-
 export default FlagDetail;
